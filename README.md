@@ -9,21 +9,21 @@
 
 
 
-**Constraint functions:**
+**&emsp;Constraint functions:**
 
 
->&emsp;&emsp;1. x<sub>1</sub> + 3x_2 + 2x_3 &le; 10<br>
->&emsp;&emsp;2. x<sub>1</sub> + 5x_2 + x<sub>3</sub> &le; 8
+>&emsp;&emsp;1. x<sub>1</sub> + 3x<sub>2</sub> + 2x<sub>3</sub> &le; 10<br>
+>&emsp;&emsp;2. x<sub>1</sub> + 5x<sub>2</sub> + x<sub>3</sub> &le; 8
 
-Where:
-- x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> &ge; 0
+&emsp;Where:
+- x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> ∈ ℝ; x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> &ge; 0
 
 # Step 2: Add Slack Variables
 
 To convert the inequality constraints into equality constraints, we introduce ***slack variables***:
 
->1.  $x<sub>1</sub> + 3x_2 + 2x_3 \leq 10$ &rarr; $x<sub>1</sub> + 3x_2 + 2x_3 + s_1 = 10$ (where $s_1$ is a slack variable, and $s_1 \geq 0$)
->2. $x<sub>1</sub> + 5x_2 + x<sub>3</sub> \leq 8$ &rarr; $x<sub>1</sub> + 5x_2 + x<sub>3</sub> + s_2 = 8$
+>1.  x<sub>1</sub> + 3x<sub>2</sub> + 2x<sub>3</sub> &le; 10 &rarr; x<sub>1</sub> + 3x<sub>2</sub> + 2x<sub>3</sub> + s<sub>1</sub> = 10 (where s<sub>1</sub> is a slack variable, and s<sub>1</sub> &ge; 0)
+>2. x<sub>1</sub> + 5x<sub>2</sub> + x<sub>3</sub> &le; 8 &rarr; x<sub>1</sub> + 5x<sub>2</sub> + x<sub>3</sub> + s<sub>2</sub> = 8
 
 
 
@@ -35,7 +35,7 @@ To convert the inequality constraints into equality constraints, we introduce **
 - Rows 1 to the number of constraints-th row represent coefficients of the constraints.
 
 - The last row is for the objective function. We convert the objective function, from
->&emsp;&emsp;$z = 8x_1 + 10x_2 + 7x_3$ into $-8x_1 - 10x_2 - 7x_3 + z = 0$ and place it in the last row.
+>&emsp;&emsp;z = 8x<sub>1</sub> + 10x<sub>2</sub> + 7x<sub>3</sub> into -8x<sub>1</sub> - 10x<sub>2</sub> - 7x<sub>3</sub> + z = 0 and place it in the last row.
 
 ![Alt text](Image/image-step3.png)
 
@@ -289,10 +289,10 @@ Look again in the last tableau to illustrate this:
 
 ![Alt text](Image/image-step7.png)
 
-*For the variable  $x<sub>1</sub>$, the '1' is found in the second row. This shows that the optimal $x<sub>1</sub>$ value is found in the second row of the RHS column, which is 8.*
+*For the variable  x<sub>1</sub>, the '1' is found in the second row. This shows that the optimal x<sub>1</sub> value is found in the second row of the RHS column, which is 8.*
 
 
-&emsp;So, basic variables are $x<sub>1</sub>, s_1$ and non-basic variables are $x<sub>2</sub>, x<sub>3</sub>, s_2$. But since $s_1, s_2$ are just slack variables, we can igonre them. And the optimal value of the objective function is now on the right down corner of the tableau, which is 64.
+&emsp;So, basic variables are x<sub>1</sub>, s<sub>1</sub> and non-basic variables are x<sub>2</sub>, x<sub>3</sub>, s<sub>2</sub>. But since s<sub>1</sub>, s<sub>2</sub> are just slack variables, we can igonre them. And the optimal value of the objective function is now on the right down corner of the tableau, which is 64.
 
 &emsp;**Here is the function to check for basic variable:**
 ```c
