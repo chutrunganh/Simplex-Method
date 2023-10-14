@@ -226,11 +226,12 @@ int smallestIndicatorIndex(float tableau[MAX_VARIABLES][MAX_CONSTRAINTS], int nu
 
 &emsp;The new tableau will be used to identify a new possible optimal solution. Now that the pivot variable has been identified in Step 5, row operations can be performed to optimize the pivot variable while keeping the rest of the tableau equivalent.
 - To optimize the pivot variable, it must be transformed into a **unit value (1)**. This can be achieved by multiplying all elements in the pivot row by the inverse of the pivot variable.
+  
 ![Alt text](Image/image-step6.png)
 
 - Next, for other columns in the tableau, the new values can be transformed using the following formula:
 
->&emsp;&emsp;**New value = -(value in the column containing the pivot variable, with the corresponding row) * (value in the new tableau in the pivot row, with corresponding col) + current value**
+>&emsp;&emsp;**New value = -(value in the column containing the pivot variable, with the corresponding row) * (value in the new tableau in the pivot row, with corresponding col) + current value**<br>
 
 ![Alt text](Image/image-step6.2.png)
 
