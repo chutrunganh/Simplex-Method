@@ -36,6 +36,7 @@ To convert the inequality constraints into equality constraints, we introduce **
 
 - The last row is for the objective function. We convert the objective function, from
 >&emsp;&emsp;z = 8x<sub>1</sub> + 10x<sub>2</sub> + 7x<sub>3</sub> into -8x<sub>1</sub> - 10x<sub>2</sub> - 7x<sub>3</sub> + z = 0 and place it in the last row.
+<br>
 
 ![Alt text](Image/image-step3.png)
 
