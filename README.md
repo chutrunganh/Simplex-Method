@@ -5,14 +5,14 @@
 **&emsp;Objective function:**
 
 
->&emsp;&emsp;z = $8x_1 + 10x_2 + 7x_3$ &rarr; max
+>&emsp;&emsp;$z = 8x_1 + 10x_2 + 7x_3$ &rarr; max
 
 
 **Constraint functions:**
 
 
->&emsp;&emsp;1. $x_1 + 3x_2 + 2x_3 \leq 10$<br>
->&emsp;&emsp;2. $x_1 + 5x_2 + x_3 \leq 8$
+>&emsp;&emsp;1. $x_1 + 3x_2 + 2x_3 &le; 10$<br>
+>&emsp;&emsp;2. $x_1 + 5x_2 + x_3 &le; 8$
 
 Where:
 - $x_1, x_2, x_3 \geq 0$
