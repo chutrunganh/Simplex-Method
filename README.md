@@ -285,7 +285,9 @@ New tableau
 - &emsp;If a variable is basic, its optimal value is equal to the value in the right-hand side (RHS) column with corresponding to the row where the '1' is located in the basic variable column.
 
 Look again in the last tableau to illustrate this:
+
 ![Alt text](Image/image-step7.png)
+
 *For the variable  $x_1$, the '1' is found in the second row. This shows that the optimal $x_1$ value is found in the second row of the RHS column, which is 8.*
 
 
