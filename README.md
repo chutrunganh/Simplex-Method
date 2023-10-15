@@ -32,7 +32,7 @@ To convert the inequality constraints into equality constraints, we introduce **
 &emsp;In the simplex method, a **Simplex Tableau** is crucial for optimizing and solving linear programming models. It contains coefficients for both the objective/target function and constraint functions.
 
 **Tableau Structure:**
-- Rows 1 to the number of constraints-th row represent coefficients of the constraints.
+- Rows 1 to the number of constraints<sup>th</sup> row represent coefficients of the constraints.
 
 - The last row is for the objective function. We convert the objective function, from
 >&emsp;&emsp;z = 8x<sub>1</sub> + 10x<sub>2</sub> + 7x<sub>3</sub> into -8x<sub>1</sub> - 10x<sub>2</sub> - 7x<sub>3</sub> + z = 0 and place it in the last row.
