@@ -1,9 +1,7 @@
 ## A brief introduction
 
 
-&emsp;The ***simplex method*** is an optimization technique used to find the best solution for linear programming problems with multiple constraints. It iteratively moves from one corner point to another to reach the optimal outcome efficiently. 
-
-&emsp;Below, I will outline the step-by-step process of this method and provide the corresponding code implementation.
+&emsp;The ***simplex method*** is an optimization technique used to find the best solution for linear programming problems with multiple constraints. It iteratively moves from one corner point to another to reach the optimal outcome efficiently. Below, I will outline the step-by-step process of this method and provide the corresponding code implementation.
 # Step 1: Convert to Standard Form
 
 **Convert the given problem to standard linear programming form.** 
