@@ -22,10 +22,14 @@
 
 To convert the inequality constraints into equality constraints, we introduce ***slack variables***:
 
->1.  x<sub>1</sub> + 3x<sub>2</sub> + 2x<sub>3</sub> &le; 10 &rarr; x<sub>1</sub> + 3x<sub>2</sub> + 2x<sub>3</sub> + **s<sub>1</sub>** = 10 (where s<sub>1</sub> is a slack variable, and s<sub>1</sub> &ge; 0)
->2. x<sub>1</sub> + 5x<sub>2</sub> + x<sub>3</sub> &le; 8 &rarr; x<sub>1</sub> + 5x<sub>2</sub> + x<sub>3</sub> + **s<sub>2</sub>** = 8
+>1.  x<sub>1</sub> + 3x<sub>2</sub> + 2x<sub>3</sub> &le; 10 &rarr; x<sub>1</sub> + 3x<sub>2</sub> + 2x<sub>3</sub> + ***s<sub>1</sub>*** = 10 (where s<sub>1</sub> is a slack variable, and s<sub>1</sub> &ge; 0)
+>2. x<sub>1</sub> + 5x<sub>2</sub> + x<sub>3</sub> &le; 8 &rarr; x<sub>1</sub> + 5x<sub>2</sub> + x<sub>3</sub> + ***s<sub>2</sub>*** = 8
 
 Then the problem becomes:
+>z = 8x<sub>1</sub> + 10x<sub>2</sub> + 7x<sub>3</sub> + 0***s<sub>1</sub>*** + 0***s<sub>2</sub>*** &rarr; max<br>
+>- x<sub>1</sub> + 3x<sub>2</sub> + 2x<sub>3</sub> + ***s<sub>1</sub>*** + 0***s<sub>2</sub>*** = 10
+>- x<sub>1</sub> + 5x<sub>2</sub> +  x<sub>3</sub> + 0***s<sub>1</sub>*** +  ***s<sub>2</sub>*** = 8<br>
+>where x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ***s<sub>1</sub>***, ***s<sub>2</sub>*** &ge; 0
 
 # Step 3: Setting up the Simplex Tableau
 
