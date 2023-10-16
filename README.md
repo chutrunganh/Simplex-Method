@@ -1,3 +1,9 @@
+## A brief introduction
+
+
+&emsp;The ***simplex method*** is an optimization technique used to find the best solution for linear programming problems with multiple constraints. It iteratively moves from one corner point to another to reach the optimal outcome efficiently. 
+
+&emsp;Below, I will outline the step-by-step process of this method and provide the corresponding code implementation.
 # Step 1: Convert to Standard Form
 
 **Convert the given problem to standard linear programming form.** 
@@ -380,4 +386,11 @@ bool checkUnbounded(float tableau[MAX_VARIABLES][MAX_CONSTRAINTS], int numVariab
 &rarr; **In both ways, you can't simply introduce a non-negative slack variable to make it an equality.**
 
 &emsp;To handle this more complex scenario, you must not only add slack variables but also need to add ***artificial variables***, which leads us to the ***Two-Phase Simplex Method***. This method is specifically designed for situations where negative values exist in the right-hand side of standard constraints, making it impossible to directly form a tableau using just the Simplex Method.
+
+
+***
+
+&emsp;*I've derived the main ideas from the document in this link, you can read for more detail:* [Explanation of Simplex Method](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.imse.iastate.edu%2Ffiles%2F2015%2F08%2FExplanation-of-Simplex-Method.docx%23%3A~%3Atext%3Dthe%2520unit%2520value.-%2CSimplex%2520method%2520is%2520an%2520approach%2520to%2520solving%2520linear%2520programming%2520models%2Csolution%2520of%2520an%2520optimization%2520problem.&wdOrigin=BROWSELINK)
+
+&emsp;*If you come across any mistakes or have suggestions to enhance the project, please don't hesitate to let me know.*
 
