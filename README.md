@@ -16,7 +16,7 @@
 >&emsp;&emsp;2. x<sub>1</sub> + 5x<sub>2</sub> + x<sub>3</sub> &le; 8
 
 &emsp;Where:
-- x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> ∈ ℝ; x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> &ge; 0
+>&emsp;x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub> &ge; 0
 
 # Step 2: Add Slack Variables
 
@@ -39,7 +39,7 @@ Then the problem becomes:
 - Rows 1 to the number of constraints<sup>th</sup> row represent coefficients of the constraints.
 
 - The last row is for the objective function. We convert the objective function, from
->&emsp;&emsp;z = 8x<sub>1</sub> + 10x<sub>2</sub> + 7x<sub>3</sub> into -8x<sub>1</sub> - 10x<sub>2</sub> - 7x<sub>3</sub> + z = 0 and place it in the last row.
+>&emsp;&emsp;z = 8x<sub>1</sub> + 10x<sub>2</sub> + 7x<sub>3</sub> + 0s<sub>1</sub> + 0s<sub>2</sub> into -8x<sub>1</sub> - 10x<sub>2</sub> - 7x<sub>3</sub> - 0s<sub>1</sub> - 0s<sub>2</sub> + z = 0 and place it in the last row.
 <br>
 
 ![Alt text](Image/image-step3.png)
@@ -362,4 +362,22 @@ bool checkUnbounded(float tableau[MAX_VARIABLES][MAX_CONSTRAINTS], int numVariab
 }
 ```
 ## Simple Method Two-Phase
+&emsp;When dealing with linear programming problems and converting them to their standard form, an interesting scenario arises when a constraint's right-hand side contains a negative number. For instance, consider the constraint:
+>2x<sub>1</sub> + 3x<sub>2</sub> &ge; 5
+
+&emsp;To convert this into standard form, you would negate both sides:
+
+>Standard Form: -2x<sub>1</sub> - 3xx<sub>2</sub> &le; -5
+
+&emsp;However, this introduces a challenge. In the standard form, the right-hand side is negative, which poses issues when trying to introduce a non-negative slack variable, say s1, as follows:
+
+>-2x<sub>1</sub> - 3x<sub>2</sub> + s<sub>1</sub> = -5
+
+&emsp;At first, this seem right. The equation -2x<sub>1</sub> - 3x<sub>2</sub> + s<sub>1</sub> = -5 still maintains the unit matrix requirement since the coefficient of s<sub>1</sub> is 1. However, when considering the base case, which always satisfies the constraint: x<sub>1</sub> = x<sub>2</sub> = 0 then s<sub>1</sub> must equal -5. This violates the condition that x<sub>1</sub>, x<sub>2</sub>, and s<sub>1</sub> should all &ge; 0.
+
+&emsp;Even if you try to convert directly from 2x<sub>1</sub> + 3x<sub>2</sub> >= 5 to equality, there is no way to add a non-negative slack variable: 2x<sub>1</sub> + 3x<sub>2</sub> + s<sub>1</sub> = 5 ( If A &ge; B, then A - X = B, not A + X = B with X &ge; 0).
+
+&rarr; **In both ways, you can't simply introduce a non-negative slack variable to make it an equality.**
+
+&emsp;To handle this more complex scenario, you must not only add slack variables but also need to add ***artificial variables***, which leads us to the ***Two-Phase Simplex Method***. This method is specifically designed for situations where negative values exist in the right-hand side of standard constraints, making it impossible to directly form a tableau using just the Simplex Method.
 
