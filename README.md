@@ -387,7 +387,7 @@ bool checkUnbounded(float tableau[MAX_VARIABLES][MAX_CONSTRAINTS], int numVariab
 
 
 ***
-
+# References
 &emsp;*I've derived the main ideas from the document in this link, you can read for more detail:* [Explanation of Simplex Method](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.imse.iastate.edu%2Ffiles%2F2015%2F08%2FExplanation-of-Simplex-Method.docx%23%3A~%3Atext%3Dthe%2520unit%2520value.-%2CSimplex%2520method%2520is%2520an%2520approach%2520to%2520solving%2520linear%2520programming%2520models%2Csolution%2520of%2520an%2520optimization%2520problem.&wdOrigin=BROWSELINK)
 
 &emsp;*If you come across any mistakes or have suggestions to enhance the project, please don't hesitate to let me know.*
