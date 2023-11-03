@@ -1,7 +1,7 @@
 ## A brief introduction
 
 
-&emsp;The ***simplex method*** is an optimization technique used to find the best solution for linear programming problems with multiple constraints. It iteratively moves from one corner point to another to reach the optimal outcome efficiently. Below, I will outline the step-by-step process of this method and provide the corresponding code implementation.
+&emsp;The ***simplex method*** is an optimization technique used to find the best solution for linear programming problems with multiple constraints. It iteratively moves from one corner point to another to reach the optimal outcome efficiently. Below, I will outline the step-by-step process of this method  through an example and provide the corresponding code implementation.
 # Step 1: Convert to Standard Form
 
 **Convert the given problem to standard linear programming form.** 
@@ -243,6 +243,7 @@ int smallestIndicatorIndex(float tableau[MAX_VARIABLES][MAX_CONSTRAINTS], int nu
 
 ![Alt text](Image/image-step6.2.png)
 
+&emsp;*This action aims to convert the column containing the pivot variable into a basic column, which contains only one '**1**' and the rest '**0**'.*
 
 **Here is the C function to create the new tableau:**
 
